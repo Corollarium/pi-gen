@@ -5,13 +5,17 @@ VIDEOWALL_APPIMAGE=${VIDEOWALL_APPIMAGE:-/home/build/build/videowall/2.0.20/vide
 rm -f "${ROOTFS_DIR}/etc/systemd/system/dhcpcd.service.d/wait.conf"
 
 # install videowall
-install -v -d                         ${ROOTFS_DIR}/home/pi/videowall/
-install -m 774 ${VIDEOWALL_APPIMAGE} ${ROOTFS_DIR}/home/pi/videowall/videowallclient-pi.AppImage
+install -v -d                         ${ROOTFS_DIR}/usr/share/videowall
+install -m 777 ${VIDEOWALL_APPIMAGE}  ${ROOTFS_DIR}/usr/share/videowall/videowallclient-linux-current-armv7l.AppImage
 
 # install autostart
-install -v -d                         ${ROOTFS_DIR}/etc/xdg/lxsession/LXDE/
-install -v -m 644 files/autostart     ${ROOTFS_DIR}/etc/xdg/lxsession/LXDE/
+install -v -d                         ${ROOTFS_DIR}/home/pi/.config/lxsession/LXDE-pi
+install -v -m 644 files/autostart     ${ROOTFS_DIR}/home/pi/.config/lxsession/LXDE-pi/autostart
 
-# working "Setting splash screen background"
-# install -v -m 644 files/background.png ${ROOTFS_DIR} /usr/share/plymouth/themes/pix/splash.png
+# Setting splash screen and background
+install -v -m 644 files/background.png ${ROOTFS_DIR}/usr/share/videowall/background.png
+install -v -m 644 files/splash.png    $/usr/share/plymouth/themes/pix/splash.png
+install -v -d                         ${ROOTFS_DIR}/home/pi/.config/pcmanfm/LXDE-pi/
+install -v -m 644 files/lxde-desktop  ${ROOTFS_DIR}/home/pi/.config/pcmanfm/LXDE-pi/desktop-items-0.conf
 
+# cat files/.bashrc >> ${ROOTFS_DIR}/home/raspberrypi/.bashrc

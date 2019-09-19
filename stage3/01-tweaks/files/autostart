@@ -3,4 +3,5 @@
 @xset s off
 @xset -dpms
 @xset s noblank
-/usr/local/bin/videowallclient-linux-2.0.20-armv7l.AppImage
+@unclutter -idle 3
+/usr/local/bin/videowallclient-linux-current-armv7l.AppImage
