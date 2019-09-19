@@ -1,0 +1,6 @@
+@lxpanel --profile LXDE-pi
+@pcmanfm --desktop --profile LXDE-pi
+@xset s off
+@xset -dpms
+@xset s noblank
+/usr/local/bin/videowallclient-linux-2.0.20-armv7l.AppImage
