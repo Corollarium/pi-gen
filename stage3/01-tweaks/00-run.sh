@@ -14,6 +14,7 @@ install -v -m 644 files/autostart     ${ROOTFS_DIR}/home/pi/.config/lxsession/LX
 
 # Setting splash screen and background
 install -v -m 644 files/background.png ${ROOTFS_DIR}/usr/share/videowall/background.png
+install -v -d                         ${ROOTFS_DIR}/usr/share/plymouth/themes/pix/
 install -v -m 644 files/splash.png    ${ROOTFS_DIR}/usr/share/plymouth/themes/pix/splash.png
 install -v -d                         ${ROOTFS_DIR}/home/pi/.config/pcmanfm/LXDE-pi/
 install -v -m 644 files/lxde-desktop  ${ROOTFS_DIR}/home/pi/.config/pcmanfm/LXDE-pi/desktop-items-0.conf
