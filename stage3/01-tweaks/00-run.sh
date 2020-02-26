@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-VIDEOWALL_APPIMAGE=${VIDEOWALL_APPIMAGE:-/home/build/build/videowall/2.0.20/videowallclient-linux-2.0.20-armv7l.AppImage}
+VIDEOWALL_APPIMAGE=${VIDEOWALL_APPIMAGE:-/home/build/build/videowall/videowallclient-linux-current-armv7l.AppImage}
 
 rm -f "${ROOTFS_DIR}/etc/systemd/system/dhcpcd.service.d/wait.conf"
 
