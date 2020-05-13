@@ -5,8 +5,8 @@ VIDEOWALL_APPIMAGE=${VIDEOWALL_APPIMAGE:-/home/build/build/videowall/videowallcl
 rm -f "${ROOTFS_DIR}/etc/systemd/system/dhcpcd.service.d/wait.conf"
 
 # install videowall
-install -v -d                         ${ROOTFS_DIR}/usr/share/videowall
-install -m 777 ${VIDEOWALL_APPIMAGE}  ${ROOTFS_DIR}/usr/share/videowall/videowallclient-linux-current-armv7l.AppImage
+install -m 777 ${VIDEOWALL_APPIMAGE}  ${ROOTFS_DIR}/home/pi/
+install -m 777 files/run-videowall.sh ${ROOTFS_DIR}/home/pi/
 
 # install autostart
 install -v -d                         ${ROOTFS_DIR}/home/pi/.config/lxsession/LXDE-pi

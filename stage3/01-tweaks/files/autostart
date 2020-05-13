@@ -4,4 +4,4 @@
 @xset -dpms
 @xset s noblank
 @unclutter -idle 3
-/usr/local/bin/videowallclient-linux-current-armv7l.AppImage
+@bash /home/pi/run-videowall.sh
