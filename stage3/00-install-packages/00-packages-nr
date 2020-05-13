@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 xserver-xorg-video-fbdev xserver-xorg xinit xserver-xorg-video-fbturbo x11-xserver-utils unclutter 
+=======
+xserver-xorg-video-fbdev xserver-xorg xinit xserver-xorg-video-fbturbo
+mousepad
+>>>>>>> upstream/master
 lxde lxtask menu-xdg
 zenity xdg-utils
 gvfs-backends gvfs-fuse
