@@ -9,6 +9,8 @@ install -v -m 777 -o 1000 -g 1000 ${VIDEOWALL_APPIMAGE}  ${ROOTFS_DIR}/home/pi/
 install -v -m 777 -o 1000 -g 1000 files/run-videowall.sh ${ROOTFS_DIR}/home/pi/
 
 # install autostart
+chown 1000:1000 .config
+install -v -d -o 1000 -g 1000             ${ROOTFS_DIR}/home/pi/.config/Videowall
 install -v -d -o 1000 -g 1000             ${ROOTFS_DIR}/home/pi/.config/lxsession/LXDE-pi
 install -v -m 644 files/autostart -o 1000 -g 1000 ${ROOTFS_DIR}/home/pi/.config/lxsession/LXDE-pi/autostart
 
