@@ -19,4 +19,4 @@ install -v -m 644 files/splash.png    ${ROOTFS_DIR}/usr/share/plymouth/themes/pi
 install -v -d -g pi -o pi             ${ROOTFS_DIR}/home/pi/.config/pcmanfm/LXDE-pi/
 install -v -m 644 files/lxde-desktop -g pi -o pi ${ROOTFS_DIR}/home/pi/.config/pcmanfm/LXDE-pi/desktop-items-0.conf
 
-# cat files/.bashrc >> ${ROOTFS_DIR}/home/raspberrypi/.bashrc
+# cat files/.bashrc >> ${ROOTFS_DIR}/home/pi/.bashrc
