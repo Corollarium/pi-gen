@@ -13,6 +13,7 @@ then
         shopt -s nullglob
         IMAGES=(videowallclient-linux-*)
         shopt -u nullglob # Turn off nullglob to make sure it doesn't interfere with anything later
+        $(chmod +x /home/pi/${IMAGES[0]})
 fi
 
 $(/home/pi/${IMAGES[0]})
