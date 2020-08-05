@@ -1,5 +1,6 @@
 #!/bin/bash
 
+{
 # exec 19>/tmp/logfile
 # BASH_XTRACEFD=19
 
@@ -32,3 +33,6 @@ while true; do
 
         sleep 5
 done
+
+exit
+}
